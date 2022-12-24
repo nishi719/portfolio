@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 10</title>
+     <!-- This is a javascript library called jQuery that is nice to use for ajax calls -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Importing Bootstrap, a styling library -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<!--  Importing FontAwesome, a library for icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+ 
+  <!-- This is my own styles  -->
+  <link rel="stylesheet" href="style.css">
+
+ 
+</head>
+<body>
+         <!-- header -->
+         <header class="pb-3 pt-4 border-bottom bg-dark">
+            <div class="d-flex align-items-center text-white">
+                <img class="p-2" src="https://freesvg.org/img/death-star-bold.png" alt="" width="48" height="48">
+                <span class="fs-4 fw-bold">RANDOM STAR WARS CHARACTER GENERATOR</span>
+            </div>
+        </header>
+    <div class="container">
+        <h1>StarWarsAPI example</h1>
+        <p>
+            Press the button to generate random Star Wars character
+           
+        </p>
+    
+        <!--Here is where the magic happens! 
+    By using the onclick attribute for button 
+    we can make a call to our javascript function. 
+    Check it out in the api call.js!  -->
+        <button type="button"  onclick="getData(); " id="generatorButton" class="btn btn-outline-light" >
+          Get random character
+          <i class="fa fa-sync"></i>
+        </button>
+        <div class="container data-holder invisible">
+          <div>Name: <span id="name"></span></div>
+          <div>Height: <span id="height"></span></div>
+          <div>Mass: <span id="mass"></span></div>
+          <div>Hair Color: <span id="hair_color"></span></div>
+          <div>Skin Color: <span id="skin_color"></span></div>
+          <div>Eye Color: <span id="eye_color"></span></div>
+          <div>Birth Year: <span id="birth_year"></span></div>
+          <div>Gender: <span id="gender"></span></div>
+        </div>
+      </div>
+      
+       <!-- footer -->
+    <footer class=" text-white border-top bg-dark">© 2022</footer>
+
+       <!-- This is my own javascript -->
+  <script src="logic.js"></script>
+  <script>
+      // waiting for the jQuery to load 
+      $(document).ready(function () {
+            // jQuery or Javascrip Code in here
+
+            // base URL for the API calls 
+            const baseUrlStarWarsAPI = 'https://rawcdn.githack.com/akabab/starwars-api/0.2.1/api';
+
+            // getting all the elements
+            const $nameCharacter = $("#nameStarWarsCharacter")
+            const $imgUrl = $("#imageStarWarsCharacter")
+            const $statusButton = $("#statusButton")
+
+            // even listener for the button - click
+            $(document).on("click", "#generatorButton", function () {
+
+                // setting the status - loading
+                $statusButton.text("Loading...")
+                $statusButton.removeClass("alert alert-success alert-danger");
+
+                // finding the number of charcters in the API - last charcter ID
+                $.get(returnURLStarWarsAPI(baseUrlStarWarsAPI), (data) => {
+
+                    // getting the random number id url and sending a get request
+                    // radom number is using the data from all charcters and using a pop function we are refering to the last
+                    // elemnt , and checking its ID - this way we know the max ID number
+                    // https://akabab.github.io/starwars-api/api/id/1.json
+                    $.get(returnURLStarWarsAPI(baseUrlStarWarsAPI, returnRandomNumber(data.pop().id)), (characterInfo) => {
+
+                        // Updating the information on the website
+                        $nameCharacter.text(characterInfo["name"]);
+                        $imgUrl.attr("src", characterInfo["image"]);
+                        // setting the status - success
+                        $statusButton.text("SUCCESSFUL !!");
+                        $statusButton.addClass("alert alert-success");
+                    })
+                        .fail(function (error) { // handling failed GET request 
+                            // setting the status - fail
+                            $statusButton.text("Failed !!");
+                            $statusButton.addClass("alert alert-danger");
+                            $nameCharacter.text("NoName");
+                            $imgUrl.attr("src", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Error.svg/1200px-Error.svg.png");
+                            console.log("Error handling");
+                        })
+                })
+            })
+        })
+  </script>
+</body>
+</html>

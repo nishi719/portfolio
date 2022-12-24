@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        form{
+         align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="get" action="index.html"  autocomplete="on">
+        Name: &nbsp;
+        <input type="text" name="name" placeholder="Enter your name">
+       <br><br>
+        Email: &nbsp;&nbsp;
+        <input type="email" name="email" placeholder="name@domain.com" required>
+       <br> <br>
+        Password: &nbsp;&nbsp;
+       <input type="password" name="password" placeholder="Enter Password" required>
+       <br><br>
+       Gender:&nbsp;&nbsp;
+       <input type="radio" name="gender" >Female
+       <input type="radio" name="gender">Male
+       <br><br>
+       Phone No:&nbsp;&nbsp;
+       <select >
+        <option >+91</option>
+        <option >+92</option>
+        <option >+93</option>
+        <option >+94</option>
+        <option >+95</option>
+       </select>
+       <input type="text"  placeholder="9899****** " max="10">
+       <br><br>
+       <b>Things you liked</b>
+       Design 
+       <input type="checkbox" name="thingsliked" value="Design">
+       Liked
+       <input type="checkbox" name="thingsliked" value="Links">
+       Ease of use
+       <input type="checkbox" name="thingsliked" value="Ease">
+       Images
+       <input type="checkbox" name="thingsliked" value="Image">
+       Source code
+       <input type="checkbox" name="thingsliked" value="Code">
+
+       <br><br>
+       Color: &nbsp;&nbsp;
+       
+       <input type="color" autofocus >
+        <br><br>
+        Comments : <br>
+        <textarea name="comments"  cols="20" rows="4">Enter your comments</textarea>
+        <br><br>
+        <b>Rate our site :</b>
+        <select name="rating" >
+            <option selected>Amazing</option>
+            <option >10</option>
+            <option >9</option>
+            <option >8</option>
+            <option >7</option>
+            <option >6</option>
+            <option >5</option>
+            <option >4</option>
+            <option >3</option>
+            <option >2</option>
+            <option >1</option>
+            <option >Awful</option> 
+        </select>
+        <br><br>
+        Date: &nbsp;&nbsp;
+        <input type="date" />
+        <br><br>
+        Datetime:&nbsp;&nbsp;
+        <input type="datetime" />
+        <br><br>
+        Datetime-local: &nbsp;&nbsp;
+        <input type="datetime-local"/>
+        <br><br>
+        <br><br>
+        Month:&nbsp;&nbsp;
+        <input type="month"/>
+        <br><br>
+        Number:&nbsp;&nbsp;
+        <input type="number" min="0" max="7" step="1" value="3">
+        <br><br>
+        Range:
+        <input type="range" min="0" max="20" value="10" >
+        <br><br>
+        Time:&nbsp;&nbsp;
+        <input type="time">
+        <br><br>
+        URL:&nbsp;&nbsp;
+        <input type="url" placeholder="http://www.domain.com "/>
+       <br><br>
+        Week:&nbsp;&nbsp;
+       <input type="week">
+       <br><br>
+       Birth Month:&nbsp;&nbsp;
+       <input type="text" id="txtlist" placeholder="Select a month" list="month" />
+       
+       
+       <br><br>
+        <input type="submit" value="submit" formnovalidate>
+        &nbsp;&nbsp;
+        <input type="clear" value="reset">
+    </form>
+</body>
+</html>

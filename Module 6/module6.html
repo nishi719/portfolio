@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 6</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <style>
+       
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .pt-80{
+            padding-top: 80px;
+
+        }
+        .pb-80{
+            padding-bottom: 80px;
+        }
+        a{
+           text-decoration: none;
+           color: rgb(215, 18, 77);
+        }
+        body{
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            line-height: 24px;
+            color:rgb(57, 175, 199);
+            background-color: rgb(38, 36, 36);
+        }
+        ul{
+            list-style: none;
+        }
+        img{
+            max-width: 100%;
+            vertical-align: middle;
+        }
+        .container{
+           
+            margin: 0 auto;
+           
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        .header-area{
+            padding: 30px 0;
+        }
+        .logo a{
+            text-transform: uppercase;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .menu ul{
+            display: flex;
+        }
+        .menu ul li a {
+            text-transform: capitalize;
+            font-size: 18px;
+            font-weight: 500;
+            margin-left: 20px;
+            transition: .4s;
+        }
+        .menu ul li a:hover{
+            color: #73d5d2;
+        }
+        .banner img{
+            border: 6px   solid rgb(165, 86, 86);
+            padding: 4px;
+            border-radius: 15px;
+            align-items: center;
+
+        }
+        .section-title{
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            margin-bottom: 60px;
+        }
+        .section-title h4{
+            text-transform: uppercase;
+            font-size: 36px;
+            margin-bottom: 16px;
+
+
+        }
+        .about{
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+        .single-about{
+            flex-basis: 32%;
+            border: 1px solid #ddd;
+            padding: 15px 25px;
+            background-color: rgb(139, 137, 137);
+            color: white;    
+            font-size: 17px;
+            border-radius: 10%;
+        }
+        .single-about i{
+            font-size: 30px;
+            color: deeppink;
+
+        }
+
+        .single-about h4{
+            text-transform: capitalize;
+            font-size: 26px;
+            font-weight: 500;
+            margin: 20px 0;
+            padding: 30px 25px;
+            transition: .4s;
+            color: rgb(221, 62, 91);
+        }
+        .single-about:hover{
+            border-color: #dc1c1c;
+            border-radius: 20%;
+            
+        }
+        .services-area {
+            background-color: #f4f4f4;
+            
+        }
+        .services{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            
+        }
+        .single-services{
+            flex-basis: 32%;
+            background-color: rgb(103, 95, 95);
+            padding: 10px;
+            height: 200px;
+            width: 200px;
+        }
+        .single-services h4{
+            background-color: rgb(75, 108, 108);
+            padding: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            text-transform: capitalize;
+            color: #fff;
+            font-size: 26px;
+        }
+        .single-services p{
+            margin: 10px 0;
+
+        }
+        .single-services a{
+            background-color: rgb(235, 34, 128);
+            display: inline-block;
+            padding: 10px 20px;
+            text-transform: capitalize;
+            color: #fff;
+            transition: .3s;
+        }
+        .single-services a:hover{
+           background-color: #73d5d2;
+        }
+
+       @media only screen and (min-width: 200px) and (max-width: 767px ){
+        .container{
+            width:100%;
+        }
+        .single-services{
+            margin: 10px;
+        }
+       }
+    
+       
+
+
+    </style>
+</head>
+<body>
+    <header class="header-area">
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <a href="#">Flexbox project</a>
+                </div>
+                <div class="menu">
+                    <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Project</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner-area">
+        <div class="container">
+            <div class="banner">
+                <img src="image1.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="about-area pt-80 pb-80">
+        <div class="container">
+            <div class="section-title">
+                <h4>About Us</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt ab doloribus illo repellendus pariatur dignissimos nisi, eaque natus et. Inventore voluptatibus eius velit culpa exercitationem quia facilis fugiat, atque ipsam.</p>
+            </div>
+            <div class="about">
+                <div class="single-about">
+                   <i class="fa-sharp fa-solid fa-bars"></i>
+                    <h4>Our Mission</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sequi minus pariatur. Ratione nemo perferendis delectus blanditiis veniam! Eligendi voluptas nulla in, dolor nisi culpa facere totam quae alias accusantium.</p>
+                </div>
+                <div class="single-about">
+                   <i class="fa-sharp fa-solid fa-bars"></i>
+                    <h4>Our Project</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sequi minus pariatur. Ratione nemo perferendis delectus blanditiis veniam! Eligendi voluptas nulla in, dolor nisi culpa facere totam quae alias accusantium.</p>
+                </div>
+                <div class="single-about">
+                    <i class="fa-sharp fa-solid fa-bars"></i>
+                    <h4>Our History</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sequi minus pariatur. Ratione nemo perferendis delectus blanditiis veniam! Eligendi voluptas nulla in, dolor nisi culpa facere totam quae alias accusantium.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services-area pb-80 pt-80" >
+      <div class="container">
+        <div class="section-title">
+            <h4>Our services</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis animi labore eligendi architecto sequi esse provident perferendis earum quod nihil, laudantium laboriosam autem tempore quaerat voluptas dolorem non dolor placeat.</p>
+        </div>
+        <div class="services">
+            <div class="single-services">
+                <h4>Service title</h4>
+                <img src="image2.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis numquam cupiditate corporis quis inventore, amet laboriosam vero. Explicabo quaerat, ipsa ipsum possimus at temporibus asperiores maiores nulla voluptatibus non laboriosam!</p>
+                <a href="">Read more</a>
+            </div>
+            <div class="single-services">
+                <h4>Service title</h4>
+                <img src="image2.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis numquam cupiditate corporis quis inventore, amet laboriosam vero. Explicabo quaerat, ipsa ipsum possimus at temporibus asperiores maiores nulla voluptatibus non laboriosam!</p>
+                <a href="">Read more</a>
+            </div>
+            <div class="single-services">
+                <h4>Service title</h4>
+                <img src="image2.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis numquam cupiditate corporis quis inventore, amet laboriosam vero. Explicabo quaerat, ipsa ipsum possimus at temporibus asperiores maiores nulla voluptatibus non laboriosam!</p>
+                <a href="">Read more</a>
+            </div>
+        </div>
+      </div>
+    </section>
+   
+</body>
+</html>

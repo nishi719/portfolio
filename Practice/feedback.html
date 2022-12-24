@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback form </title>
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body >
+    <h1>Give your Feedback</h1>
+  <form method="get" action="thanks.html" autocomplete="on">
+    Name : <br><br> 
+    <input type="text" name ="name" placeholder="First Name ">
+    &nbsp; &nbsp;
+    <input type="text" name="name" placeholder="Last Name">
+    <br>
+    <br>
+    Email Address : <br><br>
+    <input type="email" name="email" placeholder="name@domain.com" required>
+    <br>
+    <br>
+    Password : <br> <br>
+    <input type="password" name="password" placeholder="Enter your password">
+    <br>
+    <br>
+    <label for="txtlist">
+    Phone number : <br><br>
+    <select >
+      <option >+1</option>
+      <option >+44</option>
+      <option >+86</option>
+      <option >+91</option>
+      <option >+61</option>
+    </select>
+    <input type="text" placeholder="99**********" maxlength="10">
+    </label>
+    <br>
+    <br>
+    Gender : <br><br>
+    <input type="radio" name="gender">Male
+    <input type="radio" name="gender">Female
+    <input type="radio" name="gender">Other
+    <br>
+    <br>
+    Comments : <br><br>
+    <textarea name="comments"  cols="30" rows="4" placeholder="Enter Comments Here...."></textarea>
+    <br>
+    <br>
+    
+    <input type="submit" name="Submit ">
+    &nbsp; &nbsp;
+    <input type="reset" name="Clear">
+   </form>
+ 
+</body>
+</html>
